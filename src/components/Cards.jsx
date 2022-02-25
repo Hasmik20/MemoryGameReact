@@ -3,22 +3,22 @@ import Card from './Card'
 
 const Cards = () => {
       const [items, setItems] = useState([
-        { id: 1, img: '/img/piggy.jpg', stat: "" },
-        { id: 1, img: '/img/piggy.jpg', stat: "" },
-        { id: 2, img: '/img/mario.png', stat: "" },
-        { id: 2, img: '/img/mario.png', stat: "" },
-        { id: 3, img: '/img/masha.jpg', stat: "" },
-        { id: 3, img: '/img/masha.jpg', stat: "" },
-        { id: 4, img: '/img/bear.jpg', stat: "" },
-        { id: 4, img: '/img/bear.jpg', stat: "" },
-        { id: 5, img: '/img/harry.jpg', stat: "" },
-        { id: 5, img: '/img/harry.jpg', stat: "" },
-        { id: 6, img: '/img/zizzy.jpg', stat: "" },
-        { id: 6, img: '/img/zizzy.jpg', stat: "" },
-        { id: 7, img: '/img/vini.jpg', stat: "" },
-        { id: 7, img: '/img/vini.jpg', stat: "" },
-        { id: 8, img: '/img/bean.jpg', stat: "" },
-        { id: 8, img: '/img/bean.jpg', stat: "" }
+        { id: 1, img: './img/piggy.jpg', stat: "" },
+        { id: 1, img: './img/piggy.jpg', stat: "" },
+        { id: 2, img: './img/mario.png', stat: "" },
+        { id: 2, img: './img/mario.png', stat: "" },
+        { id: 3, img: './img/masha.jpg', stat: "" },
+        { id: 3, img: './img/masha.jpg', stat: "" },
+        { id: 4, img: './img/bear.jpg', stat: "" },
+        { id: 4, img: './img/bear.jpg', stat: "" },
+        { id: 5, img: './img/harry.jpg', stat: "" },
+        { id: 5, img: './img/harry.jpg', stat: "" },
+        { id: 6, img: './img/zizzy.jpg', stat: "" },
+        { id: 6, img: './img/zizzy.jpg', stat: "" },
+        { id: 7, img: './img/vini.jpg', stat: "" },
+        { id: 7, img: './img/vini.jpg', stat: "" },
+        { id: 8, img: './img/bean.jpg', stat: "" },
+        { id: 8, img: './img/bean.jpg', stat: "" }
       ].sort(() => Math.random() - 0.5))
   
    const [prev, setPrev] = useState(-1)
