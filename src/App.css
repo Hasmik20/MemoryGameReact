@@ -1,38 +1,92 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --white: rgba(246, 245, 239, 255);
+  --gray: rgb(250, 250, 250);
+  --darkGray: rgba(224, 235, 235, 0.4);
+  --black: rgb(37, 35, 35);
+  --red: rgb(226, 151, 151);
+  --green: rgb(133, 180, 133);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: var(--darkGray);
+}
+
+h1 {
   text-align: center;
+  color: var(--gray);
+  text-shadow: 2px 2px 4px var(--black);
+  padding: 1% 0 3%;
+}
+/* card */
+.main{
+  width: 70%;
+  height: 80%;
+  margin: 0 auto;
+  box-shadow: 1px 6px 15px -3px var(--black);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4,1fr);
+  gap: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container{
+  background-color: var(--gray);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  animation: 2s hideCard linear;
+  transition: transform 0.5s;
+}
+@keyframes hideCard {
+  0%,70%{
+    transform: rotateY(0);
+  }
+  100%{
+    transform: rotateY(180deg);
+  }
+}
+.card-container img{
+ max-width: 50%;
+ max-height: 50%;
+ display: block;
+ transform: scale(0);
+ animation: 2s hideImg linear;
+transition: transform 0.5s;
+margin-left: 20%;
+}
+@keyframes hideImg{
+  0%,70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.card-container .active{
+  transform: rotateY(1);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-container .active img{
+  transform: scale(1);
+}
+.card-container .wrong {
+  background-color: var(--red) ;
+}
+.card-container .correct {
+  background-color: var(--green);
 }
